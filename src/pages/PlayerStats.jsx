@@ -201,7 +201,9 @@ export default function PlayerStats() {
   }, [username, games, timeControls]);
 
   if (loading) {
-    return <LoadingScreen />;
+    return <LoadingScreen 
+    gamesNum={games}
+    />;
   }
 
   if (error) {
